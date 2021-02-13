@@ -21,12 +21,12 @@ layout: default
         <li>
           <!-- Title -->
           <span>
-            {% if paper.url == null %}
+            {% if paper.docurl == null %}
               <span class="paper-link">
                 {{ paper.title }}
               </span>
             {% else %}
-              <a class="paper-link" href={{ paper.url | relative_url }}>
+              <a class="paper-link" href={{ paper.docurl | relative_url }}>
                 {{ paper.title }}
               </a>
             {% endif %}
@@ -65,12 +65,12 @@ layout: default
         <li>
           <!-- Title -->
           <span>
-            {% if paper.url == null %}
+            {% if paper.docurl == null %}
               <span class="paper-link">
                 {{ paper.title }}
               </span>
             {% else %}
-              <a class="paper-link" href={{ paper.url | relative_url }}>
+              <a class="paper-link" href={{ paper.docurl | relative_url }}>
                 {{ paper.title }}
               </a>
             {% endif %}
