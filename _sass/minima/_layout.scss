@@ -255,6 +255,31 @@
   }
 }
 
+
+
+/**
+ * News
+ */
+.news-list-heading {
+  @include relative-font-size(1.4);
+  margin: 0;
+}
+
+.news-list {
+  > li {
+    margin-bottom: $spacing-unit / 8;
+    line-height: 1;
+  }
+
+  padding-bottom: 0;
+}
+
+.news-content {
+  display: inline-block;
+}
+
+
+
 /**
  * Papers
  */
@@ -320,6 +345,7 @@ hr.title-line {
 	border: 0;
 	box-shadow: 0 12px 5px -10px #8c8b8b inset;
 }
+
 
 
 /**

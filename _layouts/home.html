@@ -21,6 +21,14 @@ layout: default
     </section>
   </div>
 
+  <!-- Create news feed -->
+  {% assign all_news = site.news | sort: date | reverse %}
+  {% if all_news %}
+  <h2 class="news-list-heading">News</h2>
+  <hr class="title-line">
+  {% include news_feed.html all_news=all_news limit=10 %}
+  {% endif %}
+
   <!-- Create paper list of publications -->
   {% assign published_papers = site.papers | where: "ispublished", true | sort: date | reverse %}
   {% if published_papers %}
