@@ -22,15 +22,19 @@ layout: default
   </div>
 
   <!-- Create paper list of publications -->
+  {% assign published_papers = site.papers | where: "ispublished", true | sort: date | reverse %}
+  {% if published_papers %}
   <h2 class="paper-list-heading">Publications</h2>
   <hr class="title-line">
-  {% assign published_papers = site.papers | where: "ispublished", true | sort: date | reverse %}
   {% include paper_list.html papers=published_papers %}
+  {% endif %}
 
   <!-- Create paper list of preprints -->
+  {% assign preprint_papers = site.papers | where: "ispublished", false | sort: date | reverse %}
+  {% if preprint_papers %}
   <h2 class="paper-list-heading">Preprints</h2>
   <hr class="title-line">
-  {% assign preprint_papers = site.papers | where: "ispublished", false | sort: date | reverse %}
   {% include paper_list.html papers=preprint_papers %}
+  {% endif %}
 
 </div>
