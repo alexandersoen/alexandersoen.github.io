@@ -3,12 +3,23 @@ layout: default
 ---
 
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
 
-  {{ content }}
+  <!-- Personal description -->
+  <div class="wrapper">
+    <section class="personal-description-wrapper">
+      <div class="personal-description-col personal-description-col-1">
+        <h1 class="personal-description-heading">About Me</h1>
+        {{ content }}
+      </div>
 
+      <div class="personal-description-col personal-description-sep">
+      </div>
+
+      <div class="personal-description-col personal-description-col-2">
+        <img src="assets/headshot-blank.gif" width=160>
+      </div>
+    </section>
+  </div>
 
   <!-- Create paper list of publications -->
   <h2 class="paper-list-heading">Publications</h2>

@@ -107,7 +107,8 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color-light;
-  padding: $spacing-unit 0;
+  padding: $spacing-unit / 2;
+  vertical-align: middle;
 }
 
 .footer-heading {
@@ -263,9 +264,6 @@
 }
 
 .paper-list {
-  margin-left: 0;
-  list-style: none;
-
   > li {
     margin-bottom: $spacing-unit;
   }
@@ -321,4 +319,42 @@ hr.title-line {
   height: 10px;
 	border: 0;
 	box-shadow: 0 12px 5px -10px #8c8b8b inset;
+}
+
+
+/**
+ * Personal description
+ */
+
+.personal-description-heading {
+  @include relative-font-size(1.4);
+  margin-bottom: $spacing-unit / 8;
+  margin-top: $spacing-unit / 1.5;
+}
+
+.personal-description-wrapper {
+  margin-left: -$spacing-unit / 2;
+}
+
+.personal-description-col {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
+}
+
+.personal-description-col-1 {
+  width: -webkit-calc(64% - (#{$spacing-unit} / 2));
+  width:         calc(64% - (#{$spacing-unit} / 2));
+  text-align: justify;
+}
+
+.personal-description-col-2 {
+  width: -webkit-calc(34% - (#{$spacing-unit} / 2));
+  width:         calc(34% - (#{$spacing-unit} / 2));
+  text-align: right;
+}
+
+.personal-description-sep {
+  width: -webkit-calc(2% - (#{$spacing-unit} / 2));
+  width:         calc(2% - (#{$spacing-unit} / 2));
 }

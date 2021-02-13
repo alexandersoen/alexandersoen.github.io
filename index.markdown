@@ -6,4 +6,4 @@ layout: home
 title: Home
 ---
 
-UNDER CONSTRUCTION
+I am a first year PhD student at the Australian National University, under the supervision of Richard Nock, Ke Sun, and Lexing Xie. My current interests are in fairness, boosting algorithms, and information geometry. 
