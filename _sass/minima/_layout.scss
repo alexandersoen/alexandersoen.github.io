@@ -253,3 +253,72 @@
     }
   }
 }
+
+/**
+ * Papers
+ */
+.paper-list-heading {
+  @include relative-font-size(1.4);
+  margin: 0;
+}
+
+.paper-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.paper-title {
+  @include relative-font-size(2.625);
+  letter-spacing: -1px;
+  line-height: 1;
+  float: left;
+
+  @include media-query($on-laptop) {
+    @include relative-font-size(2.25);
+  }
+}
+
+.paper-author-list {
+  display: inline;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+  font-size: 0;
+  float: left;
+
+  > li {
+    @include relative-font-size(0.8);
+    display: inline-flex;
+  }
+
+  > li::after {
+    content: ",\00a0";
+  }
+
+  > li:last-child::after {
+    content: "";
+  }
+
+  > li:nth-last-child(2)::after {
+    content: ", and\00a0";
+  }
+}
+
+.paper-meta {
+  @include relative-font-size(0.8);
+  line-height: 0.8;
+  padding: 0;
+  float: left;
+}
+
+
+hr.title-line {
+  margin-bottom: 3px;
+  height: 10px;
+	border: 0;
+	box-shadow: 0 12px 5px -10px #8c8b8b inset;
+}

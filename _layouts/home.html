@@ -9,26 +9,95 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+  <!-- The paper hashes from data subfolder, sorted -->
+  {% assign papers = site.papers | sort: date | reverse %}
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+  <!-- Create paper list of publications -->
+  <h2 class="paper-list-heading">Publications</h2>
+  <hr class="title-line">
+  <ol class="paper-list">
+    {% for paper in papers %}
+      {% if paper.ispublished %}
+        <li>
+          <!-- Title -->
+          <span>
+            {% if paper.url == null %}
+              <span class="paper-link">
+                {{ paper.title }}
+              </span>
+            {% else %}
+              <a class="paper-link" href={{ paper.url | relative_url }}>
+                {{ paper.title }}
+              </a>
+            {% endif %}
+          </span>
+          <br>
+          <!-- Authors -->
+          <ul class="paper-author-list">
+            {% for author in paper.authors %}
+              <li>
+                <span>
+                {% if author contains site.author or site.author contains author %}
+                  <b>{{ author | strip }}</b>
+                {% else %}
+                  {{ author | strip }}
+                {% endif %}
+                </span>
+              </li>
+            {% endfor %}
+          </ul>
+          <br>
+          <!-- Meta Info -->
+          <span class="paper-meta">
+            <b> {{ paper.venue | escape }} </b>
+          </span>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+
+  <!-- Create paper list of preprints -->
+  <h2 class="paper-list-heading">Preprints</h2>
+  <hr class="title-line">
+  <ol class="paper-list">
+    {% for paper in papers %}
+      {% unless paper.ispublished %}
+        <li>
+          <!-- Title -->
+          <span>
+            {% if paper.url == null %}
+              <span class="paper-link">
+                {{ paper.title }}
+              </span>
+            {% else %}
+              <a class="paper-link" href={{ paper.url | relative_url }}>
+                {{ paper.title }}
+              </a>
+            {% endif %}
+          </span>
+          <br>
+          <!-- Authors -->
+          <ul class="paper-author-list">
+            {% for author in paper.authors %}
+              <li>
+                <span>
+                {% if author contains site.author or site.author contains author %}
+                  <b>{{ author | strip }}</b>
+                {% else %}
+                  {{ author | strip }}
+                {% endif %}
+                </span>
+              </li>
+            {% endfor %}
+          </ul>
+          <br>
+          <!-- Meta Info -->
+          <span class="paper-meta">
+            <b> {{ paper.venue | escape }} </b>
+          </span>
+        </li>
+      {% endunless %}
+    {% endfor %}
+  </ol>
 
 </div>
