@@ -16,21 +16,23 @@ layout: default
       </div>
 
       <div class="personal-description-col personal-description-col-2">
-        <img src="assets/headshot-blank.gif" width=160>
+        <img src="assets/headshot_round.png" width=160>
       </div>
     </section>
   </div>
 
-  <!-- Create news feed -->
+  <!--
+  <-- Create news feed ->
   {% assign all_news = site.news | sort: date | reverse %}
   {% if all_news %}
   <h2 class="news-list-heading">News</h2>
   <hr class="title-line">
   {% include news_feed.html all_news=all_news limit=10 %}
   {% endif %}
+  -->
 
   <!-- Create paper list of publications -->
-  {% assign published_papers = site.papers | where: "ispublished", true | sort: date | reverse %}
+  {% assign published_papers = site.papers | where: "ispublished", true | sort: year | reverse %}
   {% if published_papers %}
   <h2 class="paper-list-heading">Publications</h2>
   <hr class="title-line">
@@ -38,7 +40,7 @@ layout: default
   {% endif %}
 
   <!-- Create paper list of preprints -->
-  {% assign preprint_papers = site.papers | where: "ispublished", false | sort: date | reverse %}
+  {% assign preprint_papers = site.papers | where: "ispublished", false | sort: year | reverse %}
   {% if preprint_papers %}
   <h2 class="paper-list-heading">Preprints</h2>
   <hr class="title-line">

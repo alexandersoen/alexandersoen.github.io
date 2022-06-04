@@ -1,38 +1,43 @@
 <ol class="paper-list">
-{% for paper in include.papers %}
+{% assign years = include.papers | group_by: "year" %}
+{% for yitem in years %}
+    {% for paper in yitem.items %}
     <li>
         <!-- Title -->
-        <span>
         {% if paper.docurl == null %}
-            <span class="paper-link">
-            {{ paper.title }}
-            </span>
+            {{ paper.title | escape }}
         {% else %}
-            <a class="paper-link" href={{ paper.docurl | relative_url }}>
-            {{ paper.title }}
+            <a class="paper-title" href={{ paper.docurl | relative_url }}>
+            {{ paper.title | escape }}
             </a>
         {% endif %}
-        </span>
-        <br>
+
+        <div class="paper-p">
         <!-- Authors -->
+        <span class="paper-div">
         <ul class="paper-author-list">
         {% for author in paper.authors %}
             <li>
-            <span>
             {% if author contains site.author or site.author contains author %}
-                <b>{{ author | strip }}</b>
+                <b>{{ author | strip | escape }}</b>
             {% else %}
-                {{ author | strip }}
+                {{ author | strip | escape }}
             {% endif %}
-            </span>
             </li>
         {% endfor %}
         </ul>
-        <br>
-        <!-- Meta Info -->
-        <span class="paper-meta">
-        <b> {{ paper.venue | escape }} </b>
         </span>
+
+        <!-- Meta Info -->
+        <span class="paper-meta paper-div">
+        {% if paper.note %}
+            <b> {{ paper.venue | escape }}, {{ paper.note | escape }}, {{ paper.year | escape }} </b>
+        {% else %}
+            <b> {{ paper.venue | escape }}, {{ paper.year | escape }} </b>
+        {% endif %}
+        </span>
+    </div>
     </li>
+{% endfor %}
 {% endfor %}
 </ol>

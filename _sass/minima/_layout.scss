@@ -289,19 +289,29 @@
 }
 
 .paper-list {
+  display: inline-grid;
+  list-style-position: inside;
+  list-style-type: none;
+  counter-reset: orderedlist;
+  margin-left: 0;
+  > li:before {
+    counter-increment: orderedlist;
+    content: '['counter(orderedlist)']';
+  }
+
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: 0.5*$spacing-unit;
   }
 }
 
 .paper-title {
-  @include relative-font-size(2.625);
-  letter-spacing: -1px;
+  @include relative-font-size(1);
   line-height: 1;
   float: left;
+  margin-bottom: 0;
 
   @include media-query($on-laptop) {
-    @include relative-font-size(2.25);
+    @include relative-font-size(1);
   }
 }
 
@@ -310,7 +320,9 @@
   list-style: none;
   padding: 0;
   margin-left: 0;
+  margin-bottom: 0;
   font-size: 0;
+  line-height: 1;
   float: left;
 
   > li {
@@ -334,10 +346,24 @@
 .paper-meta {
   @include relative-font-size(0.8);
   line-height: 0.8;
-  padding: 0;
   float: left;
+  display: block;
+  text-align: left;
 }
 
+.paper-p {
+  margin-bottom: 0;
+  > span {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.paper-div {
+  float: left;
+  margin-bottom: 5pt;
+}
 
 hr.title-line {
   margin-bottom: 3px;
