@@ -13,13 +13,14 @@ authors:
 - Ke Sun
 - Lexing Xie
 category: null
-date: 2022-06-04 14:47:52.618964
-ispublished: false
-journal: arXiv preprint arXiv:2201.12947
+date: 2022-09-04 14:47:52.618964
+ispublished: true
+journal: Advances in Neural Information Processing Systems
 poster: null
 title: Fair Wrapping for Black-box Predictions
 url: null
-venue: arXiv preprint arXiv:2201.12947
+venue: Advances in Neural Information Processing Systems
 video: null
+volume: '35'
 year: '2022'
 ...
