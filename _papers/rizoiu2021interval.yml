@@ -13,13 +13,12 @@ authors:
 - Lexing Xie
 category: null
 date: 2022-06-04 14:47:52.615183
-ispublished: true 
+ispublished: false
 journal: arXiv preprint arXiv:2104.07932
 poster: null
 title: Interval-censored Hawkes processes
-url: null
+docurl: https://arxiv.org/pdf/2104.07932.pdf
 venue: arXiv preprint arXiv:2104.07932
-note: (Accepted with minor revision to JMLR)
 video: null
 year: '2021'
 ...

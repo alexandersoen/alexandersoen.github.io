@@ -7,7 +7,7 @@
         {% if paper.docurl == null %}
             {{ paper.title | escape }}
         {% else %}
-            <a class="paper-title" href={{ paper.docurl | relative_url }}>
+            <a href="{{ paper.docurl }}">
             {{ paper.title | escape }}
             </a>
         {% endif %}
