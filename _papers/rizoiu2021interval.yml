@@ -14,11 +14,11 @@ authors:
 category: null
 date: 2022-06-04 14:47:52.615183
 ispublished: true
-journal: arXiv preprint arXiv:2104.07932
+journal: JMLR
 poster: null
 title: Interval-censored Hawkes processes
-docurl: https://arxiv.org/pdf/2104.07932.pdf
-venue: JMLR 2022 (Accepted, Pending Camera Ready)
+docurl: https://jmlr.org/papers/volume23/21-0917/21-0917.pdf
+venue: JMLR 2022
 video: null
 year: '2022'
 ...
