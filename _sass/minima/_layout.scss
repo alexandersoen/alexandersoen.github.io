@@ -338,7 +338,11 @@
     content: "";
   }
 
-  > li:nth-last-child(2)::after {
+  > li:nth-last-child(2):after {
+    content: "\00a0 and\00a0";
+  }
+
+  > li:nth-last-child(n+3) ~ li:nth-last-child(2):after {
     content: ", and\00a0";
   }
 }
