@@ -401,7 +401,7 @@ hr.title-line {
 .personal-description-col-1 {
   width: -webkit-calc(64% - (#{$spacing-unit} / 2));
   width:         calc(64% - (#{$spacing-unit} / 2));
-  text-align: justify;
+  text-align: left;
 }
 
 .personal-description-col-2 {
