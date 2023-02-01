@@ -1,7 +1,6 @@
 <ol class="paper-list">
     {% for paper in include.papers %}
     <li>
-        {{ paper.year }}
         <!-- Title -->
         {% if paper.docurl == null %}
             {{ paper.title | escape }}
