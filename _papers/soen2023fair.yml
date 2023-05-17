@@ -1,0 +1,19 @@
+---
+ENTRYTYPE: article
+ID: soen2023fair
+author: Soen, Alexander and Husain, Hisham and Nock, Richard
+authors:
+- Alexander Soen
+- Hisham Husain
+- Richard Nock
+category: null
+date: 2023-05-05 14:47:52.613769
+ispublished: true
+journal: International Conference on Machine Learning
+poster: null
+title: Fair Densities via Boosting the Sufficient Statistics of Exponential Families
+docurl: https://arxiv.org/pdf/2012.00188.pdf
+venue: International Conference on Machine Learning
+video: null
+year: '2023'
+...
