@@ -6,14 +6,15 @@ authors:
 - Alexander Soen
 - Ke Sun
 category: null
-date: 2024-09-20 11:21:25.359316
-ispublished: false
-journal: arXiv preprint arXiv:2402.05379
+date: 2024-11-07 11:21:25.359316
+ispublished: true
+journal: Advances in Neural Information Processing Systems
 poster: null
 title: Tradeoffs of Diagonal Fisher Information Matrix Estimators
 url: null
-venue: arXiv preprint arXiv:2402.05379
+venue: Advances in Neural Information Processing Systems
 video: null
+volume: '38'
 year: '2024'
 docurl: https://arxiv.org/pdf/2402.05379
 ...

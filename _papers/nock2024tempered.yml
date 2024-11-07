@@ -10,14 +10,15 @@ authors:
 - Alexander Soen
 - Manfred K Warmuth
 category: null
-date: 2024-09-20 11:21:25.359934
-ispublished: false
-journal: arXiv preprint arXiv:2402.04163
+date: 2024-11-07 11:21:25.359934
+ispublished: true
+journal: Advances in Neural Information Processing Systems
 poster: null
 title: 'Tempered Calculus for ML: Application to Hyperbolic Model Embedding'
 url: null
-venue: arXiv preprint arXiv:2402.04163
+venue: Advances in Neural Information Processing Systems
 video: null
+volume: '38'
 year: '2024'
 docurl: https://arxiv.org/pdf/2402.04163
 ...
