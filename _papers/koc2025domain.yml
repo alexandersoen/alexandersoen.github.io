@@ -1,6 +1,6 @@
 ---
 ENTRYTYPE: article
-ID: soen2024tradeoffs
+ID: koc2025domain
 author: Koc, Okan and Soen, Alexander and Chiang, Chao-Kai and Sugiyama, Masashi
 authors:
 - Okan Koc
@@ -13,7 +13,7 @@ date: 2025-01-22 11:21:25.359316
 ispublished: true
 poster: null
 title: 'Domain Adaptation and Entanglement: an Optimal Transport Perspective'
-docurl: https://openreview.net/forum?id=TVbCKAqoD8
+docurl: https://openreview.net/forum?id=ZDyi1BeTu7
 venue: The International Conference on Artificial Intelligence and Statistics
 video: null
 year: '2025'
